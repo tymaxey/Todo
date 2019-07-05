@@ -1,7 +1,11 @@
+/* main {
+    display: flex;
+    justify-content: center; */
+
 body {
-    background-color: rgb(101, 111, 108)
+    background-color: rgb(39, 223, 161);
 }
 
 h1 {
-    color: azure;
+    color:black;
 }
