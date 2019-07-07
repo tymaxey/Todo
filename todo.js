@@ -1,4 +1,3 @@
-//Todo List Object
 var todoList = {
   todos: [],
   addTodo: function(todoText) {
@@ -21,20 +20,23 @@ var todoList = {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
 
-    this.todos.forEach(function(todo) {
-      if (todo.completed === true) {
+    // Get number of completed todos.
+    for (var i = 0; i < totalTodos; i++) {
+      if (this.todos[i].completed === true) {
         completedTodos++;
       }
-    });
+    }
 
+    // Case 1: If everything’s true, make everything false.
     if (completedTodos === totalTodos) {
-      this.todos.forEach(function(todo) {
-        todo.completed = false;
-      });
+      for (var i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = false;
+      }
+      // Case 2: Otherwise, make everything true.
     } else {
-      this.todo.forEach(function() {
-        todo.completed = true;
-      });
+      for (var i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = true;
+      }
     }
   }
 };
